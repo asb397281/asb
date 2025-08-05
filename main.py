@@ -42,20 +42,9 @@ def build_model(args,device):
     net = {       
         'ResNet18': ResNet18,
         'ResNet34': ResNet34,
-        'ResNet50': ResNet50,
-        'ResNet101': ResNet101,
-        'PreActResNet18': PreActResNet18,
-        'GoogLeNet' : GoogLeNet,
-        'DenseNet121' : DenseNet121,
-        'ResNeXt29_2x64d' : ResNeXt29_2x64d,
-        'MobileNet' : MobileNet,
+        'ResNet50': ResNet50,       
+        'DenseNet121' : DenseNet121,     
         'MobileNetV2' : MobileNetV2,
-        'DPN92' : DPN92,
-        'ShuffleNetG2': ShuffleNetG2,
-        'SENet18' : SENet18,
-        'ShuffleNetV2': ShuffleNetV2,
-        'EfficientNetB0' : EfficientNetB0,
-        'RegNetX_200MF' : RegNetX_200MF,
         'SimpleDLA':SimpleDLA    
     }[args.model](num_classes=no_of_class)
     net = net.to(device)
